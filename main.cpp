@@ -4,7 +4,7 @@
 
 #include "ticker.h"
 
-ticker taskstodo(1);
+ticker taskstodo();
 
 void printhello(void)
 {
@@ -40,7 +40,7 @@ int main()
 	//Need to execute the execute function of Ticker every X time. Quickest way to do this in Linux is this.
 	std::thread t1(doEveryMs);
 
-	//Create a few tasks to amuse Ticker.
+	//Create a few tasks to amuse Tthen aicker.
 	int ID1 = taskstodo.attach(printhello, 500);
 	int ID2 = taskstodo.attach(printhey, 1500);
 	int ID3 = taskstodo.attach(printahoy, 1000);

@@ -15,7 +15,7 @@ class ticker
 	
 
 public:
-	ticker(uint32_t Timebase);
+	ticker();
 	~ticker();
 	int attach(std::function<void(void)> Func, uint32_t Time);
 	void detach(uint32_t TaskID);

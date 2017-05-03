@@ -1,8 +1,7 @@
 #include "ticker.h"
 
-ticker::ticker(uint32_t Timebase)
+ticker::ticker()
 {
-	this->Timebase = Timebase;
 } 
 
 ticker::~ticker()
@@ -44,7 +43,7 @@ void ticker::detach(uint32_t TaskID)
 void ticker::execute(void)
 {
 	static uint32_t localtime;
-	localtime += this->Timebase;
+	++localtime;
 	for(uint32_t i; i < MAXTASKS; i++)
 	{
 		if(this->Tasks[i].InUse == 1)
